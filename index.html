@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+	<title>javascript tutorial from udemy</title>
+	<link rel = "stylesheet" href="style.css">
+	<script src = "practice.js"></script>
+	<style>
+	.red-text {
+		color: red;
+		transition: 5s;
+		font-size: 300px;
+	} 
+	</style>
+</head>
+<body>
+	<h1 id = "main-heading">hello</h1>
+
+	<p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua.</p>
+
+	<p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua.</p>
+
+	<script>
+	// var name = "Rachael"
+	// alert(name);
+
+	// if(5>2) { alert("this is true");
+	// }
+	// else { alert("this is not true");
+	// }
+	// var x = 1;
+	// while (x < 10) {
+	// 	console.log(x);
+	// 	x += 1;
+	// }
+	// for(var i = 1; i < 10; i++) {
+	// 	console.log(i);
+	// 	console.log("hello" + i);
+	// }
+	// var arr = []
+	// arr.push("John");
+	// arr.push(3);
+	// arr.push("Judy");
+	// console.log(arr);
+	// arr.pop();
+	// console.log(arr);
+	// console.log(arr[0]);
+
+	// arr = ["rachael","hitesh","mohan"];
+	// for(x = 0; x < arr.length; x++) {
+	// 	console.log("hi my name is " + arr[x]);
+	// }
+
+	// function sayHello() {
+	// 	console.log("let's say hello");
+	// }
+	// sayHello();
+
+	// var sayHello2 = function() {
+	// 	console.log("let's say hello");
+	// }
+	// sayHello2();
+
+	// var addSomething = function(a,b) {
+	// 	return a + b; //return is the "final act" in a funtion. nothing after it will show up.
+	// }
+
+	// console.log(addSomething(2, 3));
+
+	// var user = { //this is an object
+	// 	firstname: "john",
+	// 	lastname: "smith",
+	// 	sayHello: function() { console.log("hello " + user.firstname + " " + user.lastname)}
+	// };
+
+	// console.log(user.firstname + " " + user.lastname);
+	// user.sayHello();
+
+	// user.email = "test@example.com" //adds another property or element to the object
+	// user.sayBye = function() {
+	// 	alert("goodbye" + user.firstname);
+	// }
+
+	// user.sayBye()
+
+	// var User = function(first_name, last_name) { //creates a prototype (know in other languages as a class)
+	// 	this.f_name = first_name;
+	// 	this.l_name = last_name;
+	// }
+
+	// var joe = new User("joe","smith");
+	// console.log(joe.f_name);
+
+	// User.prototype.sayHello = function() {
+	// 	console.log("hello");
+	// }
+
+	// var sam = new User('sam','smith');
+	// sam.sayHello();
+
+	// reaching into a document and getting things
+	// var h = document.getElementById('main-heading');
+	// h.style.fontSize = "100px"; // not the best way to go about this but will work
+
+	// var p = document.getElementsByClassName('para'); //gives back an array of objects
+	// var tagname = document.getElementsByTagName('p');
+	// var selector = document.querySelector('.para'); //gives back the first css selector element
+	// var selector_all = document.querySelectorAll('.para'); //gives back all css selector elements
+
+	// h.className = h.className + " red-text"; //modifies css with javascript
+
+	//events
+	var h = document.querySelector('h1');
+	
+	var addRedClass = function() {
+		h.className = h.className + " red-text";
+	}
+	h.addEventListener('click', addRedClass); //turns the (first) h1 text red when you click on it
+	h.addEventListener('mouseover', addRedClass);
+	</script>
+</body>
+</html>
