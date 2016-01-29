@@ -4,12 +4,17 @@
 	<title>javascript tutorial from udemy</title>
 	<link rel = "stylesheet" href="style.css">
 	<script src = "practice.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script> 
+	<!-- add any other jquery plugins here, like waypoints http://imakewebthings.com/waypoints/  -->
 	<style>
 	.red-text {
 		color: red;
 		transition: 5s;
-		font-size: 300px;
+		font-size: ;
 	} 
+	.border-red {
+		border: 1px solid red;
+	}
 	</style>
 </head>
 <body>
@@ -111,13 +116,43 @@
 	// h.className = h.className + " red-text"; //modifies css with javascript
 
 	//events
-	var h = document.querySelector('h1');
+	// var h = document.querySelector('h1');
 	
-	var addRedClass = function() {
-		h.className = h.className + " red-text";
-	}
-	h.addEventListener('click', addRedClass); //turns the (first) h1 text red when you click on it
-	h.addEventListener('mouseover', addRedClass);
+	// var addRedClass = function() {
+	// 	h.className = h.className + " red-text";
+	// }
+	// h.addEventListener('click', addRedClass); //turns the (first) h1 text red when you click on it
+	// h.addEventListener('mouseover', addRedClass);
+
+	//ajax and jquery
+	//$('.para').first().addClass('red-text'); // targets any css selector, document.get . . . above
+	
+	$('h1').click(function(){
+		//$('h1').css('border', '1px solid red');
+		$('h1').addClass('border-red'); //this is the cleaner version of the above
+	})
+	$('h1').hover(function(){
+		$('h1').addClass('red-text');
+	})
+
+	$(document).ready(function(){
+		$('p').fadeOut(4000).fadeIn(2000);
+	});
+
+
+	// $('.para').click(function(){
+	// 	$(this).addClass('border-red') //only adds border to the para being clicked
+	// })
+
+	//get in the habit of wrapping all your code in a document.ready() (see below) and don't leave variables out in the open -- see learn.jquery.com
+	$(document).ready(function(){
+		$('.para').click(function(){
+		$(this).addClass('border-red') //only adds broder to the para being clicked
+		});
+	});
+
+
+
 	</script>
 </body>
 </html>
